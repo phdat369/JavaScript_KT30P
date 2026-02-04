@@ -8,6 +8,8 @@ if (students.includes("Lan")) {
 else {
     console.log("Tên Lan không tồn tại trong mảng");
 }
+console.log("Vị trí đầu tiên của tên Nam trong mảng");
+
 let index = students.indexOf("Nam");
 console.log(index);
 //câu 2
