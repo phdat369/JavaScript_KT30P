@@ -9,7 +9,7 @@ const filterProducts = (products,search) => {
     let searchArray = products.filter((element) => {
         return element.id == search;
     });
-    if(searchArray.length >=0) {
+    if(searchArray.length >0) {
         searchArray.forEach((element) => {
             console.log(element);
             
@@ -17,9 +17,21 @@ const filterProducts = (products,search) => {
     }
     else {
         console.log("Không tìm thấy sản phẩm");
+    } 
+}
+filterProducts(products,"P00");
+const checkProducts = (products) => {
+    let check = products.every((element) => {
+        return element.price > 0;
+    });
+    if(check) {
+        console.log("Dữ liệu bảng giá hợp lệ");
+    }
+    else {
+        console.log("Phát hiện sản phẩm chưa cập nhật giá"); 
     }
 }
-filterProducts(products,"P03");
+checkProducts(products);
 const displayProducts = (products) => {
     let catalogDisplay = [];
     products.forEach((element) => {
@@ -34,17 +46,4 @@ const displayProducts = (products) => {
     console.log(catalogDisplay);
 }
 displayProducts(products);
-const checkProducts = (products) => {
-    products.forEach((element) => {
-        let check = element.every((home) => {
-            return home.price > 0
-        });
-    });
-    if(check) {
-        console.log("Dữ liệu bảng giá hợp lệ");
-    }
-    else {
-        console.log("Phát hiện sản phẩm chưa cập nhật giá"); 
-    }
-}
-checkProducts(products);
+
