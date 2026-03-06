@@ -11,10 +11,9 @@ const filterSortProducts = (products) => {
         return product.inStock == true;
     });
     let sortPrice = inStockProducts.sort((a,b) => {
-        return b.price - a.price
+        return b.price - a.price;
     });
     console.log(sortPrice);
-    
 }
 filterSortProducts(products); 
 
@@ -41,5 +40,6 @@ const sumPrice = (products) => {
     console.log(totalPrice);
 }
 sumPrice(products);
+
 
 
