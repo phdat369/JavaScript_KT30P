@@ -18,7 +18,7 @@ const adddProfile = () => {
         return;
     }
     for(let char of valueName) {
-        if(isNaN(char)) {
+        if(!isNaN(char)) {
             alert("Tên không chứa kí tự đặc biệt")
         }
     }
